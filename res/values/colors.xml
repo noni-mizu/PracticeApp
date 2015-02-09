@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+    <item name="transparent" type="color">#00FFFFFF</item>
+
+    <item name="grey" type="color">#555555</item>
+
+    <item name="blue" type="color">#81b6dd</item>
+
+    <item name="darkblue" type="color">#000099</item> 
+    
+    <item name="pressedorange" type="color">#ffd27f</item>
+    
+    <item name="orange" type="color">#ffc04c</item>
+    
+    <item name="lt_brown" type="color">#ad8232</item>
+    
+    <item name="button_default" type="color">#996300</item>
+    
+    <item name="reminder_default" type="color">#ffc04c</item>
+    
+    <item name="reminder_clicked" type="color">#e99700</item>
+
+</resources>

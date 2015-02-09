@@ -1,0 +1,56 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="org.azurespot.practiceapp.location.LocationMain"
+    android:background="#dbdbdb" >
+
+    <Button
+        android:id="@+id/location_on_map"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:padding="15dp"
+        android:text="@string/location_map"
+        android:background="@drawable/location_map_btn"
+        android:textColor="#ffffff"
+        android:onClick="findMe" />
+
+    <Button
+        android:id="@+id/location_in_popup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="5dp"
+        android:padding="15dp"
+        android:text="@string/location_dialog"
+        android:background="#996300"
+        android:textColor="#ffffff"
+        android:onClick="findThroughPopup" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_marginTop="75dp"
+        android:layout_centerHorizontal="true"
+        android:background="#996300" >
+        
+        <!-- The Google Play library provides the MapFragment class-->
+        <fragment
+        android:id="@+id/location_map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        class="com.google.android.gms.maps.MapFragment" />
+
+  
+    </FrameLayout>
+
+</RelativeLayout>

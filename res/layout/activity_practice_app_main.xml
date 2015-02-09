@@ -1,0 +1,89 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="org.azurespot.practiceapp.PracticeAppMain" >
+
+    <Button
+        android:id="@+id/button_browser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/button_calendar"
+        android:layout_centerHorizontal="true"
+        android:background="#bdbdbd"
+        android:textColor="#e59400"
+        android:padding="15dp"
+        android:text="@string/browser"
+        android:onClick="openBrowser" />
+
+    <Button
+        android:id="@+id/button_address_book"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/button_browser"
+        android:layout_centerHorizontal="true"
+        android:background="#d3d3d3"
+        android:textColor="#cc8400"
+        android:padding="15dp"
+        android:text="@string/address"
+        android:onClick="toContacts" />
+
+    <Button
+        android:id="@+id/button_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/button_address_book"
+        android:layout_centerHorizontal="true"
+        android:background="#dbdbdb"
+        android:textColor="#996300"
+        android:padding="15dp"
+        android:text="@string/location"
+        android:onClick="toShowLocation" />
+
+    <Button
+        android:id="@+id/button_sms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/button_location"
+        android:layout_centerHorizontal="true"
+        android:background="#e9e9e9"
+        android:textColor="#664200"
+        android:padding="15dp"
+        android:text="@string/sms"
+        android:onClick="toSMS" />
+
+    <Button
+        android:id="@+id/button_calendar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/button_call"
+        android:layout_centerHorizontal="true"
+        android:background="#939393"
+        android:textColor="#ffc04c"
+        android:padding="15dp"
+        android:text="@string/calendar"
+        android:onClick="toCalendar" />
+
+    <Button
+        android:id="@+id/button_call"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="#696969"
+        android:textColor="#ffd27f"
+        android:padding="15dp"
+        android:text="@string/make_call"
+        android:onClick="openDialer" />
+
+</RelativeLayout>

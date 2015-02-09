@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="org.azurespot.practiceapp"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="16"
+        android:targetSdkVersion="21" />
+
+    <uses-permission android:name="android.permission.READ_CALENDAR" />
+    <uses-permission android:name="android.permission.WRITE_CALENDAR" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.WRITE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+
+    <!-- Allows the Maps API to cache map tile data in the device's external storage area. -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <!-- Creating Permission to receive Google Maps -->
+    <permission
+        android:name="org.azurespot.practiceapp.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
+
+    <!-- Permission to receive Google Maps -->
+    <uses-permission android:name="org.azurespot.practiceapp.permission.MAPS_RECEIVE" />
+
+    <!-- Permission to read Google Services -->
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+
+    <!-- Maps API needs OpenGL ES 2.0. -->
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <!-- Google Maps Fragment API Key Data -->
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyCNF4jZOmBT1SoNTtZuisuA7w2Girjw5MI" />
+
+        <activity
+            android:name=".PracticeAppMain"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".calendar.CalendarShow"
+            android:label="@string/title_activity_calendar" >
+        </activity>
+
+        <receiver android:name=".calendar.AlarmReceiver" >
+        </receiver>
+
+        <activity
+            android:name=".MakeCall"
+            android:label="@string/title_activity_make_call" >
+        </activity>
+        <activity
+            android:name=".OpenBrowser"
+            android:label="@string/title_activity_open_browser" >
+        </activity>
+        <activity
+            android:name=".addressbook.AddressBook"
+            android:label="@string/title_activity_address_book" >
+        </activity>
+        <activity
+            android:name=".location.LocationMain"
+            android:label="@string/title_activity_location_main" >
+        </activity>
+        <activity
+            android:name="org.azurespot.practiceapp.sms.SMSMain"
+            android:label="@string/title_activity_smsmain" >
+        </activity>
+        <!-- <receiver android:name="org.azurespot.practiceapp.sms.SMSListFragment.SMSReceiver"
+            	  android:exported="true"> 
+            <intent-filter android:priority="1000"> 
+                <action android:name=
+                    "android.provider.Telephony.SMS_RECEIVED" /> 
+            </intent-filter> 
+        </receiver> -->
+    </application>
+
+</manifest>
